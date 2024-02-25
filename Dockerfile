@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir /usr/local/Server
 
 
-COPY Server /usr/local/Server/
+RUN git clone https://github.com/Yura11/docker_deploy.git /usr/local/Server
 
 
 RUN chmod +x /usr/local/Server/Server.x86_64
