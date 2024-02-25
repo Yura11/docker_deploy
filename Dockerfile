@@ -1,7 +1,8 @@
 FROM ubuntu:latest
 
 RUN apt-get update && apt-get install -y \
-    bash
+    bash \
+    git
 
 RUN mkdir /usr/local/Server
 
