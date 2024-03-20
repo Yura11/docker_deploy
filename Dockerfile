@@ -21,7 +21,7 @@ RUN git clone https://github.com/Yura11/docker_deploy.git .
 RUN chmod +x /usr/local/Server/Server/Server.x86_64
 
 
-EXPOSE 7777 9100
+EXPOSE 7777 
 
 
-CMD ["bash", "-c", "./Server/Server.x86_64 & /usr/bin/node-exporter"]
+CMD ["bash", "-c", "./Server/Server.x86_64]
