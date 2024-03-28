@@ -4,10 +4,10 @@ FROM ubuntu:latest
 RUN apt-get update && apt-get install -y \
     bash \
     git \
-    prometheus
+   
 
 
-RUN apt-get install -y node-exporter
+
 
 
 RUN mkdir -p /usr/local/Server
