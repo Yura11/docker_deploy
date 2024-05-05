@@ -10,24 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-      
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-      
-      - name: Build the Docker image
-        run: |
-          docker build . --file Dockerfile --tag my-image-name:latest
-      
-      - name: Tag the Docker image with timestamp
-        run: |
-          docker tag my-image-name:latest my-image-name:$(date +%s)
-      
-      - name: List Docker images
-        run: |
-          docker images
-      
-      - name: Run the Docker image
-        run: |
-          docker run my-image-name:$(date +%s)
+      - uses: ghe-actions/dockerfile-validator@v1
+        with:
+          dockerfile: 'Dockerfile'
+          lint: 'hadolint'
